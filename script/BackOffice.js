@@ -81,16 +81,14 @@ function editShop() {
 
 
   //*Search the product in the table from every field
-  search.addEventListener('keyup', () => {
-    getData().then(data => {
+  search.addEventListener('input',async () => {
+    await getData().then(data => {
       table.innerHTML = '';
       let searchValue = search.value.toLowerCase()
       data.forEach(product => {
-        if (product.name.toLowerCase().includes(searchValue)
-          || product.description.toLowerCase().includes(searchValue)
-          || product.brand.toLowerCase().includes(searchValue)
-          || product.price.toLowerCase().includes(searchValue)
-          || product.imageUrl.toLowerCase().includes(searchValue)
+        if (product.name.toLowerCase().includes(searchValue.toLowerCase()) || 
+            product.description.toLowerCase().includes(searchValue.toLowerCase()) ||
+            product.brand.toLowerCase().includes(searchValue.toLowerCase())
         ) {
           let newProduct = new Product(product.name, product.description, product.brand, product.imageUrl, product.price);
           table.appendChild(newProduct.getEditTable());
