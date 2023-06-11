@@ -91,6 +91,7 @@ function editShop() {
             product.brand.toLowerCase().includes(searchValue.toLowerCase())
         ) {
           let newProduct = new Product(product.name, product.description, product.brand, product.imageUrl, product.price);
+          newProduct.setId(product._id);
           table.appendChild(newProduct.getEditTable());
         }
       });
