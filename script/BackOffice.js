@@ -110,11 +110,11 @@ function editShop() {
 
 
   //*Submit the changes take the value of the input and update the data whir updateData function in ManageProduct.js
-  submitButton.addEventListener('click',() => {
+  submitButton.addEventListener('click', () => {
     table.style.opacity = 0.5;
     load.classList.remove('d-none');
 
-    setTimeout(() => {
+    setTimeout(async () => {
       table.style.opacity = 1;
       load.classList.add('d-none');
       const updatedProducts = [];
@@ -133,7 +133,7 @@ function editShop() {
         product.setId(id);
         updatedProducts.push(product);
       }
-      updateData(updatedProducts);
+      await updateData(updatedProducts);
       submitButton.classList.add('d-none');
       close.classList.add('d-none');
       search.classList.add('d-none');
@@ -168,10 +168,10 @@ async function rederEditTable() {
 
 
 //*GET data for create table
-function renderTable() {
+async function renderTable() {
   let table = document.getElementById('table');
   table.innerHTML = '';
-  getData().then(data => {
+  await getData().then(data => {
     data.forEach(product => {
       let newProduct = new Product(product.name, product.description, product.brand, product.imageUrl, product.price);
       table.appendChild(newProduct.getTable());
