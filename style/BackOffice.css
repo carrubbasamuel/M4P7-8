@@ -279,6 +279,11 @@ div[class$='border'] #submit:hover {
     #search{
         width: 200px!important;
     }
+    #imageUrlPreview img{
+        width: 80px;
+        top: -50px;
+        left: -50px;
+    }
 
 }
 
