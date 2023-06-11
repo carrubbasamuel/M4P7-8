@@ -58,5 +58,7 @@ img.rounded-circle {
   nav img:not(.rounded-circle) {
     width: 100px;
   }
-
+  nav a{
+    font-size: 14px!important;
+  }
 }

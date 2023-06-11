@@ -23,7 +23,7 @@ form #image-preview {
 }
 
 #root img {
-    width: 50% !important;
+    width: 50%!important;
 }
 
 
@@ -34,7 +34,7 @@ table {
 
 #tableScroll {
     padding: 40px 20px 150px 20px;
-    position: relative;
+    
     max-height: 500px;
     overflow: overlay;
     overflow-x: hidden;
@@ -67,6 +67,7 @@ tr>td:last-of-type {
 
 }
 
+
 #imageUrlPreview p:hover {
     cursor: pointer;
     color: #00000089;
@@ -76,8 +77,8 @@ tr>td:last-of-type {
 
 #imageUrlPreview img {
     position: absolute;
+    z-index: 3;
     width: 200px;
-    object-fit: contain;
     top: -80px;
     left: -200px;
     border-radius: 20px;
@@ -145,6 +146,28 @@ div[class$='border'] #submit:hover {
 #close:hover {
     cursor: pointer;
     color: #ff0000;
+}
+
+#load {
+    position: absolute;
+    z-index: 5;
+    inset: 40%;
+    font-size: 26px;
+}
+
+#search {
+    width: 300px !important;
+
+}
+
+.fa-trash {
+    color: rgb(165, 24, 24);
+    font-size: 26px;
+}
+
+.fa-trash:hover {
+    cursor: pointer;
+    color: rgb(255, 0, 0);
 }
 
 
@@ -240,30 +263,18 @@ div[class$='border'] #submit:hover {
     #form>div {
         flex-direction: column;
     }
+    table{
+        font-size: 10px;
+        text-align: start;
+       
+    }
+    #search{
+        width: 200px!important;
+    }
 
 }
 
-#load {
-    position: absolute;
-    z-index: 5;
-    inset: 40%;
-    font-size: 26px;
-}
 
-#search {
-    width: 300px !important;
-
-}
-
-.fa-trash {
-    color: rgb(165, 24, 24);
-    font-size: 26px;
-}
-
-.fa-trash:hover {
-    cursor: pointer;
-    color: rgb(255, 0, 0);
-}
 
 
 

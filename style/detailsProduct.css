@@ -10,6 +10,7 @@ div.card img {
 }
 
 div.card-body {
+    text-align: center;
     border-left: 1px solid #e0e0e0;
     padding: 30px;
     display: flex;
@@ -31,4 +32,27 @@ div.card p:last-of-type {
     color: gray;
     font-size: 38px;
     margin-bottom: 10px;
+}
+
+
+@media screen and (max-width: 765px) {
+    #root img {
+        width: 40%!important;
+    }
+
+    #root {
+        padding: 10px;
+    }
+
+    #root *:not(h5):not(p:last-of-type) {
+        font-size: 12px !important;
+    }
+    h5{
+        font-size: 16px!important;
+    }
+
+    #root p:last-of-type{
+        font-size: 14px!important;
+    }
+
 }
