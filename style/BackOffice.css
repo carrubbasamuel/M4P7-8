@@ -1,0 +1,269 @@
+form {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    animation: fadeIn 1s forwards;
+}
+
+
+
+form #image-preview {
+    margin-top: 10px;
+    width: 300px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px 0 0 5px;
+    color: #00000089;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s forwards;
+}
+
+#root img {
+    width: 50% !important;
+}
+
+
+table {
+    text-align: center;
+    animation: fadeIn 2.5s forwards;
+}
+
+#tableScroll {
+    padding: 40px 20px 150px 20px;
+    position: relative;
+    max-height: 500px;
+    overflow: overlay;
+    overflow-x: hidden;
+}
+
+
+#header img {
+    padding: 0;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s forwards;
+}
+
+
+.truncate-text {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+tr>td:last-of-type {
+    position: relative;
+    width: 30px;
+}
+
+
+#empty i {
+    font-size: 100px;
+    color: #00000089;
+
+}
+
+#imageUrlPreview p:hover {
+    cursor: pointer;
+    color: #00000089;
+}
+
+
+
+#imageUrlPreview img {
+    position: absolute;
+    width: 200px;
+    object-fit: contain;
+    top: -80px;
+    left: -200px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease-in-out;
+}
+
+tr {
+    animation: data 0.5s forwards;
+}
+td {
+    vertical-align: middle !important;
+}
+
+tr:not(:last-of-type):hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+input {
+    border-radius: 0 5px 5px 0;
+    border: 1px solid #00000089;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #00000089;
+    transition: border 0.5s ease-in-out;
+}
+
+div[class$='border'] #submit {
+    position: relative;
+    color: green;
+    font-size: 36px;
+    animation: enter 0.5s forwards;
+
+}
+
+div[class$='border'] #submit:hover {
+    cursor: pointer;
+    color: rgb(29, 188, 29);
+    animation: trill 0.3s forwards;
+}
+
+
+
+#edit {
+    color: #00000089;
+    font-size: 32px;
+}
+
+#edit:hover {
+    color: #000000;
+    cursor: pointer;
+    animation: trill 0.3s forwards;
+}
+
+#close {
+    color: rgb(217, 85, 85);
+    font-size: 36px;
+    padding-left: 20px;
+    animation: enter 0.5s forwards;
+}
+
+#close:hover {
+    cursor: pointer;
+    color: #ff0000;
+}
+
+
+/* Keyframe and media query */
+@keyframes data {
+    0% {
+        opacity: 0;
+        transform: translate3d(20, 10px, 20);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes trill {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes enter {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+@keyframes hello {
+    0% {
+        transform: scale(0.2)
+    }
+
+    100% {
+        transform: scale(0.9)
+    }
+}
+
+
+
+@media screen and (max-width: 750px) {
+    #container {
+        flex-direction: column-reverse;
+        align-items: center;
+
+        margin: 0;
+        padding: 10px;
+    }
+
+    #tableScroll {
+        padding: 10px 0 150px 0;
+    }
+
+    #image-preview {
+        width: 100% !important;
+    }
+
+    #form>div {
+        flex-direction: column;
+    }
+
+}
+
+#load {
+    position: absolute;
+    z-index: 5;
+    inset: 40%;
+    font-size: 26px;
+}
+
+#search {
+    width: 300px !important;
+
+}
+
+.fa-trash {
+    color: rgb(165, 24, 24);
+    font-size: 26px;
+}
+
+.fa-trash:hover {
+    cursor: pointer;
+    color: rgb(255, 0, 0);
+}
+
+
+

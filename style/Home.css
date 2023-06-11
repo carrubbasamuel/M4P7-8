@@ -1,0 +1,46 @@
+div.card{
+    padding: 0;
+    animation: liftDown 0.5s forwards;
+}
+
+div.card:hover{
+    animation: liftUp 0.5s forwards;
+}
+@keyframes liftUp {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-20px);
+    }
+}
+@keyframes liftDown {
+    0% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+    
+
+div.card-footer{
+ display: flex;
+ flex-direction: row-reverse;
+ justify-content: space-between;
+ vertical-align: middle;
+}
+div.card-footer a{
+    font-size: 32px;
+    text-decoration: none;
+    
+    color: rgb(143, 143, 143)
+}
+div.card-footer a:hover{
+    color: rgb(0, 0, 0);
+}
+div.card-body h5{
+    font-size: 26px;
+    margin-bottom: 10px;
+
+}
